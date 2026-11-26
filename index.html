@@ -224,8 +224,21 @@ async function generate() {
     if (!songsData.length) throw new Error("楽曲データが空です");
 
     const count = Math.floor(Math.random() * 10) + 1;
-    const selected = shuffle(idolsData).slice(0, count);
-    const song = songsData[Math.floor(Math.random() * songsData.length)];
+const song = songsData[Math.floor(Math.random() * songsData.length)];
+
+// 楽曲と異なる作品のアイドルを必ず1人選ぶ
+const crossoverWork = song.work === "SideM" ? "シャニマス" : "SideM";
+
+const crossoverIdol = shuffle(
+  idolsData.filter(idol => idol.work === crossoverWork)
+)[0];
+
+// 残りの人数は全アイドルからランダムに選ぶ
+const remainingIdols = shuffle(
+  idolsData.filter(idol => idol.name !== crossoverIdol.name)
+).slice(0, count - 1);
+
+const selected = shuffle([crossoverIdol, ...remainingIdols]);
 
     document.getElementById("count").textContent = count + " MEMBERS";
     document.getElementById("idols").innerHTML = selected.map(idol => `
