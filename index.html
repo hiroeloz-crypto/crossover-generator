@@ -291,7 +291,7 @@ const selected = shuffle([crossoverIdol, ...remainingIdols]);
     document.getElementById("count").textContent = count + " MEMBERS";
     document.getElementById("idols").innerHTML = selected.map(idol => `
       <div class="idol">
-        <div class="agency">${idol.work}</div>
+        <div class="agency ${idol.work === "SideM" ? "sidem" : "shiny"}">${idol.work}</div>
         <div class="name">${idol.name}</div>
       </div>
     `).join("");
