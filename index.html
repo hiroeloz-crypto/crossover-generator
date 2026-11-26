@@ -215,10 +215,35 @@ const idolsData = [
   {name:"郁田 はるき",work:"シャニマス"}
 ];
 
-// 楽曲データはここに追加していく
-const songsData = [
-  {title:"楽曲データ準備中",artist:""}
-];
+async function generate() {
+  try {
+    const response = await fetch("./songs.json");
+    if (!response.ok) throw new Error("楽曲データを読み込めません");
+
+    const songsData = await response.json();
+    if (!songsData.length) throw new Error("楽曲データが空です");
+
+    const count = Math.floor(Math.random() * 10) + 1;
+    const selected = shuffle(idolsData).slice(0, count);
+    const song = songsData[Math.floor(Math.random() * songsData.length)];
+
+    document.getElementById("count").textContent = count + " MEMBERS";
+    document.getElementById("idols").innerHTML = selected.map(idol => `
+      <div class="idol">
+        <div class="agency">${idol.work}</div>
+        <div class="name">${idol.name}</div>
+      </div>
+    `).join("");
+
+    document.getElementById("song").textContent = song.title;
+    document.getElementById("songAgency").textContent = song.artist || "";
+
+    document.getElementById("result").classList.add("show");
+  } catch (error) {
+    alert("楽曲データの読み込みに失敗しました。");
+    console.error(error);
+  }
+}
 
 function shuffle(array) {
   const result = [...array];
