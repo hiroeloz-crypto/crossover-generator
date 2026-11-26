@@ -254,24 +254,6 @@ function shuffle(array) {
   return result;
 }
 
-function generate() {
-  const count = Math.floor(Math.random() * 10) + 1;
-  const selected = shuffle(idolsData).slice(0, count);
-  const song = songsData[Math.floor(Math.random() * songsData.length)];
-
-  document.getElementById("count").textContent = count + " MEMBERS";
-  document.getElementById("idols").innerHTML = selected.map(idol => `
-    <div class="idol">
-      <div class="agency">${idol.work}</div>
-      <div class="name">${idol.name}</div>
-    </div>
-  `).join("");
-
-  document.getElementById("song").textContent = song.title;
-  document.getElementById("songAgency").textContent = song.artist;
-
-  document.getElementById("result").classList.add("show");
-}
 
 function copyResult() {
   const song = document.getElementById("song").textContent;
