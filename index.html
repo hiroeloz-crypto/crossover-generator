@@ -269,7 +269,11 @@ function generate() {
   const selected = shuffle(idolsData).slice(0, count);
   const song = songsData[Math.floor(Math.random() * songsData.length)];
 
-  document.getElementById("count").textContent = count + " MEMBERS";
+  document.getElementById("count").textContent =
+  count + " MEMBERS / SideM " +
+  selected.filter(idol => idol.work === "SideM").length +
+  " : シャニマス " +
+  selected.filter(idol => idol.work === "シャニマス").length;
   document.getElementById("idols").innerHTML = selected.map(idol => `
     <div class="idol">
       <div class="agency">${idol.work}</div>
