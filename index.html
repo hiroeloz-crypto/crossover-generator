@@ -6,105 +6,153 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>315 × 283 CROSSOVER GENERATOR</title>
 <style>
-* { box-sizing: border-box; }
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding: 24px 16px;
-  background: #11131b;
-  color: #f5f5f7;
-  font-family: sans-serif;
+  padding: 30px 18px;
+  background: #f7f6fb;
+  color: #292536;
+  font-family: "Helvetica Neue", sans-serif;
 }
+
 .container {
   max-width: 600px;
   margin: auto;
 }
+
 h1 {
   text-align: center;
-  font-size: 25px;
-  letter-spacing: 1px;
-  margin: 12px 0 6px;
+  font-size: 32px;
+  letter-spacing: 2px;
+  color: #55428c;
+  margin: 20px 0 5px;
+  font-weight: 800;
 }
+
 .subtitle {
   text-align: center;
-  color: #aaa;
-  font-size: 12px;
-  margin-bottom: 28px;
-}
-.panel {
-  background: #1d202b;
-  border: 1px solid #343847;
-  border-radius: 14px;
-  padding: 20px;
-  margin-top: 18px;
-}
-.label {
-  color: #aeb4c7;
+  color: #9589b5;
   font-size: 11px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  margin-bottom: 35px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #e8e3f1;
+  border-radius: 18px;
+  padding: 22px;
+  margin-top: 22px;
+  box-shadow: 0 8px 25px rgba(80, 62, 120, 0.06);
+}
+
+.label {
+  color: #927fba;
+  font-size: 10px;
+  letter-spacing: 2.5px;
   font-weight: bold;
   margin-bottom: 14px;
 }
+
 button {
   width: 100%;
   border: 0;
-  border-radius: 9px;
-  padding: 14px;
-  background: #8d78e8;
+  border-radius: 12px;
+  padding: 16px;
+  background: #7660b5;
   color: white;
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
   margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(118, 96, 181, 0.18);
 }
+
 button.secondary {
-  background: #343847;
+  background: #eeeaf6;
+  color: #66528f;
+  box-shadow: none;
 }
-.result { display: none; }
-.result.show { display: block; }
+
+.result {
+  display: none;
+}
+
+.result.show {
+  display: block;
+}
+
 .song {
-  font-size: 23px;
+  font-size: 25px;
   font-weight: bold;
   line-height: 1.5;
+  color: #382d52;
 }
+
 .songAgency {
-  color: #aaa;
+  color: #9589a8;
   font-size: 13px;
-  margin-top: 5px;
+  margin-top: 7px;
 }
+
 .count {
-  color: #aaa;
+  color: #a097b0;
   font-size: 12px;
   margin-bottom: 14px;
+  letter-spacing: 1px;
 }
+
 .idols {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 9px;
+  gap: 10px;
 }
+
 .idol {
-  background: #292d3a;
-  border-radius: 9px;
-  padding: 12px;
+  background: #faf9fc;
+  border: 1px solid #eeeaf4;
+  border-radius: 11px;
+  padding: 14px 12px;
 }
+
 .agency {
-  color: #aaa;
+  color: #9b8bbd;
   font-size: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
+
 .name {
   font-size: 14px;
   font-weight: bold;
+  color: #393348;
 }
+
 hr {
   border: 0;
-  border-top: 1px solid #393d4b;
-  margin: 22px 0;
+  border-top: 1px solid #eeeaf4;
+  margin: 24px 0;
 }
+
 .note {
   text-align: center;
-  color: #777;
-  font-size: 11px;
-  margin-top: 24px;
+  color: #b0a8bd;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+
+@media (max-width: 380px) {
+  .song {
+    font-size: 21px;
+  }
+
+  .panel {
+    padding: 17px;
+  }
 }
 </style>
 </head>
