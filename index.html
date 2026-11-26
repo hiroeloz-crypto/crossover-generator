@@ -3,163 +3,135 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Crossover Unit Generator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>315 × 283 CROSSOVER GENERATOR</title>
 <style>
-:root {
-  --bg: #10121b;
-  --panel: #1c2030;
-  --line: #343a50;
-  --text: #f4f4fa;
-  --sub: #a9aec3;
-  --accent: #c7a6ff;
-  --accent2: #8ee5d0;
-}
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  background: radial-gradient(ellipse at top, #29253d, var(--bg) 65%);
-  color: var(--text);
-  font-family: system-ui, -apple-system, "Noto Sans JP", sans-serif;
-  min-height: 100vh;
+  padding: 24px 16px;
+  background: #11131b;
+  color: #f5f5f7;
+  font-family: sans-serif;
 }
 .container {
-  width: min(680px, 100%);
+  max-width: 600px;
   margin: auto;
-  padding: 30px 18px 50px;
-}
-header { text-align: center; padding: 20px 0 28px; }
-.tag {
-  color: var(--accent);
-  letter-spacing: .22em;
-  font-size: 12px;
-  font-weight: 700;
 }
 h1 {
-  font-size: clamp(28px, 8vw, 42px);
-  letter-spacing: .03em;
-  margin: 12px 0;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin: 12px 0 6px;
 }
-.subtitle { color: var(--sub); font-size: 14px; }
+.subtitle {
+  text-align: center;
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 28px;
+}
 .panel {
-  background: rgba(28,32,48,.95);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 22px;
-  margin-bottom: 18px;
-  box-shadow: 0 12px 35px rgba(0,0,0,.18);
+  background: #1d202b;
+  border: 1px solid #343847;
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 18px;
 }
 .label {
-  color: var(--sub);
-  font-size: 12px;
-  letter-spacing: .12em;
-  font-weight: 700;
+  color: #aeb4c7;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 14px;
 }
 button {
-  border: 0;
-  border-radius: 14px;
-  padding: 15px 20px;
-  font-size: 16px;
-  font-weight: 800;
-  cursor: pointer;
-  color: #181522;
-  background: linear-gradient(100deg, var(--accent), var(--accent2));
   width: 100%;
+  border: 0;
+  border-radius: 9px;
+  padding: 14px;
+  background: #8d78e8;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
 }
 button.secondary {
-  color: var(--text);
-  background: #2b3044;
-  border: 1px solid var(--line);
+  background: #343847;
 }
-button:active { transform: scale(.98); }
 .result { display: none; }
 .result.show { display: block; }
+.song {
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.songAgency {
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 5px;
+}
 .count {
-  font-size: 48px;
-  font-weight: 900;
-  margin: 8px 0 18px;
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 14px;
 }
 .idols {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 9px;
 }
 .idol {
-  background: #272c40;
-  border: 1px solid #3c425b;
-  padding: 13px;
-  border-radius: 13px;
+  background: #292d3a;
+  border-radius: 9px;
+  padding: 12px;
 }
-.idol .agency {
-  font-size: 11px;
-  color: var(--sub);
+.agency {
+  color: #aaa;
+  font-size: 10px;
   margin-bottom: 5px;
 }
-.idol .name { font-weight: 700; font-size: 15px; }
-.song {
-  font-size: 23px;
-  font-weight: 800;
-  line-height: 1.5;
-  margin: 12px 0;
+.name {
+  font-size: 14px;
+  font-weight: bold;
 }
-.songAgency { color: var(--accent2); font-size: 13px; }
+hr {
+  border: 0;
+  border-top: 1px solid #393d4b;
+  margin: 22px 0;
+}
 .note {
-  color: var(--sub);
-  font-size: 12px;
-  line-height: 1.8;
-}
-.actions { display: grid; gap: 10px; }
-hr { border: 0; border-top: 1px solid var(--line); margin: 22px 0; }
-footer {
   text-align: center;
-  color: var(--sub);
+  color: #777;
   font-size: 11px;
-  padding: 10px;
+  margin-top: 24px;
 }
 </style>
 </head>
 <body>
 <div class="container">
-<header>
-  <div class="tag">315 × 283</div>
-  <h1>CROSSOVER<br>UNIT GENERATOR</h1>
-  <div class="subtitle">偶然が生み出す、もうひとつのステージ。</div>
-</header>
+  <h1>315 × 283</h1>
+  <div class="subtitle">CROSSOVER UNIT GENERATOR</div>
 
-<div class="panel">
-  <div class="label">RANDOM GENERATION</div>
-  <p class="note">アイドルと楽曲をランダムに選び、仮想ユニットを生成します。</p>
-  <button onclick="generate()">GENERATE</button>
-</div>
+  <button onclick="generate()">ユニットを生成する</button>
 
-<div class="panel result" id="result">
-  <div class="label">YOUR CROSSOVER UNIT</div>
-  <div class="count" id="count"></div>
-  <div class="idols" id="idols"></div>
-  <hr>
-  <div class="label">SELECTED SONG</div>
-  <div class="song" id="song"></div>
-  <div class="songAgency" id="songAgency"></div>
-  <hr>
-  <div class="actions">
+  <div class="panel result" id="result">
+    <div class="label">SELECTED SONG</div>
+    <div class="song" id="song"></div>
+    <div class="songAgency" id="songAgency"></div>
+    <hr>
+    <div class="label">YOUR CROSSOVER UNIT</div>
+    <div class="count" id="count"></div>
+    <div class="idols" id="idols"></div>
+    <hr>
     <button class="secondary" onclick="copyResult()">結果をコピー</button>
     <button onclick="generate()">もう一度抽選する</button>
   </div>
-</div>
 
-<div class="panel">
-  <div class="label">ABOUT</div>
-  <p class="note">
-    アイドルの人数・作品比率・楽曲はすべてランダム。
-    選ばれたアイドルたちが選出楽曲を歌う、仮想の越境ユニットです。
-  </p>
-</div>
-<footer>Unofficial fan-made tool. Not affiliated with Bandai Namco.</footer>
+  <div class="note">315 × 283 CROSSOVER GENERATOR</div>
 </div>
 
 <script>
-// 仮データ：次の制作段階で正式な全アイドル名簿に差し替えます。
-
 const idolsData = [
   // SideM：49人
   {name:"天ヶ瀬 冬馬",work:"SideM"},
@@ -243,26 +215,19 @@ const idolsData = [
   {name:"郁田 はるき",work:"シャニマス"}
 ];
 
-// 仮の楽曲データ：後で正式な楽曲一覧に差し替えます。
+// 楽曲データはここに追加していく
 const songsData = [
-  {name:"Reason!!",work:"SideM"},
-  {name:"DRIVE A LIVE",work:"SideM"},
-  {name:"サイコーCOUNTDOWN",work:"SideM"},
-  {name:"Spread the Wings!!",work:"シャニマス"},
-  {name:"Multicolored Sky",work:"シャニマス"},
-  {name:"いつか Shiny Days",work:"シャニマス"}
+  {title:"楽曲データ準備中",artist:""}
 ];
 
 function shuffle(array) {
-  const copy = [...array];
-  for (let i = copy.length - 1; i > 0; i--) {
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
+    [result[i], result[j]] = [result[j], result[i]];
   }
-  return copy;
+  return result;
 }
-
-let lastText = "";
 
 function generate() {
   const count = Math.floor(Math.random() * 10) + 1;
@@ -277,22 +242,22 @@ function generate() {
     </div>
   `).join("");
 
-  document.getElementById("song").textContent = song.name;
-  document.getElementById("songAgency").textContent = song.work;
-
-  lastText = "CROSSOVER UNIT\n出演人数：" + count + "人\n" +
-    selected.map(i => i.work + "／" + i.name).join("\n") +
-    "\n楽曲：" + song.work + "／" + song.name;
+  document.getElementById("song").textContent = song.title;
+  document.getElementById("songAgency").textContent = song.artist;
 
   document.getElementById("result").classList.add("show");
-  document.getElementById("result").scrollIntoView({behavior:"smooth"});
 }
 
 function copyResult() {
-  if (!lastText) return;
-  navigator.clipboard.writeText(lastText)
-    .then(() => alert("抽選結果をコピーしました！"))
-    .catch(() => alert("コピーできませんでした。"));
+  const song = document.getElementById("song").textContent;
+  const members = [...document.querySelectorAll("#idols .name")]
+    .map(el => el.textContent).join("、");
+  const text = song + "\n" + members;
+  navigator.clipboard.writeText(text).then(() => {
+    alert("結果をコピーしました！");
+  }).catch(() => {
+    alert("コピーできませんでした。");
+  });
 }
 </script>
 </body>
