@@ -1,6 +1,53 @@
+
 [
   {
-    "title": "テスト楽曲",
-    "artist": "テストアーティスト"
+    "title": "DRIVE A LIVE",
+    "artist": "315 STARS",
+    "work": "SideM"
+  },
+  {
+    "title": "Reason!!",
+    "artist": "315 STARS",
+    "work": "SideM"
+  },
+  {
+    "title": "Beyond The Dream",
+    "artist": "315 STARS",
+    "work": "SideM"
+  },
+  {
+    "title": "STARLIGHT CELEBRATE!",
+    "artist": "DRAMATIC STARS",
+    "work": "SideM"
+  },
+  {
+    "title": "Study Equal Magic!",
+    "artist": "S.E.M",
+    "work": "SideM"
+  },
+  {
+    "title": "Spread the Wings!!",
+    "artist": "シャイニーカラーズ",
+    "work": "シャニマス"
+  },
+  {
+    "title": "ヒカリのdestination",
+    "artist": "イルミネーションスターズ",
+    "work": "シャニマス"
+  },
+  {
+    "title": "バベルシティ・グレイス",
+    "artist": "アンティーカ",
+    "work": "シャニマス"
+  },
+  {
+    "title": "夢咲きAfter school",
+    "artist": "放課後クライマックスガールズ",
+    "work": "シャニマス"
+  },
+  {
+    "title": "アルストロメリア",
+    "artist": "アルストロメリア",
+    "work": "シャニマス"
   }
 ]
